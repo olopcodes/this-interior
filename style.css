@@ -131,7 +131,14 @@ button {
   display: none;
 }
 
+/* hero styles ==============================================*/
+
+.hero {
+  padding: var(--spacing-xl) 0;
+}
+
 @media screen and (min-width: 51em) {
+  /* header */
   .header__desktop-nav {
     display: block;
   }
@@ -145,6 +152,8 @@ button {
   .header__mobile-nav {
     display: none;
   }
+
+  /* hero */
 }
 
 @media screen and (min-width: 71em) {
