@@ -117,7 +117,6 @@ button {
   position: absolute;
   top: 70%;
   left: 5%;
-
   transform: translate(-50%, -50%);
   padding: var(--spacing-reg);
   width: 90%;
@@ -189,7 +188,7 @@ button {
 }
 
 .show-menu {
-  transform: translateX(0);
+  transform: translateX(0) !important;
 }
 
 /* header styles ==============================================*/
@@ -226,10 +225,6 @@ button {
   color: var(--accent);
 }
 
-.mobile__menu-icon:nth-of-type(2) {
-  display: none;
-}
-
 .header__mobile-list {
   text-transform: capitalize;
   display: block;
@@ -249,7 +244,6 @@ button {
 .header__mobile-list li {
   margin-bottom: var(--spacing-med);
   width: 7rem;
-  /* border: 1px solid; */
 }
 
 .header__mobile-list li a {
@@ -328,7 +322,6 @@ button {
 
   .hero__left {
     flex-basis: 60%;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
