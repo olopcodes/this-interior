@@ -44,6 +44,7 @@ body {
   background-color: var(--dark);
   color: var(--white);
   font-family: var(--body-font);
+  line-height: 1.5;
 }
 
 h1,
@@ -93,6 +94,23 @@ button {
   font-weight: 600;
 }
 
+.cta-link {
+  display: flex;
+  gap: var(--spacing-sm);
+  align-items: center;
+  text-transform: capitalize;
+  color: var(--accent);
+  width: 8rem;
+}
+
+.cta-link span {
+  transition: all 0.3s ease;
+}
+
+.cta-link:hover span {
+  transform: translateX(8px);
+}
+
 /* header styles ==============================================*/
 .header .container {
   padding-top: var(--spacing-reg);
@@ -137,7 +155,27 @@ button {
   padding: var(--spacing-xl) 0;
 }
 
-@media screen and (min-width: 51em) {
+.hero__left {
+  margin-bottom: var(--spacing-xxl);
+}
+
+.hero__left h1 {
+  font-size: 2.5rem;
+  line-height: 1;
+  margin-bottom: var(--spacing-med);
+}
+
+.hero__left p {
+  margin-bottom: var(--spacing-med);
+}
+
+.hero-img {
+  height: 20rem;
+}
+
+/* card  ================================= */
+
+@media screen and (min-width: 48em) {
   /* header */
   .header__desktop-nav {
     display: block;
@@ -154,9 +192,28 @@ button {
   }
 
   /* hero */
+
+  .hero .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero__left {
+    flex-basis: 60%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-img {
+    height: 30rem;
+  }
 }
 
-@media screen and (min-width: 71em) {
+@media screen and (min-width: 62em) {
   .logo {
     font-size: 1.5rem;
   }
@@ -164,5 +221,20 @@ button {
   .header__desktop-list {
     font-size: 1.25rem;
     gap: var(--spacing-med);
+  }
+
+  .hero .container {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .hero__left {
+    display: block;
+    flex-basis: 36%;
+    margin-bottom: 0;
+  }
+
+  .hero__right {
+    flex-basis: 55%;
   }
 }
