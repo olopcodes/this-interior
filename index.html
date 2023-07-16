@@ -29,30 +29,32 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header id="header" class="header__desktop">
-      <div class="container">
+    <header id="header" class="header">
+      <div class="container flex">
         <a href="./index.html" class="logo">
           <p class="logo-text">this interior</p>
         </a>
 
         <nav id="desktop-nav" class="header__desktop-nav">
           <ul class="header__desktop-list">
-            <li><a href="./index.html">Home</a></li>
+            <li><a class="active-link" href="./index.html">Home</a></li>
             <li><a href="./collection.html">collection</a></li>
             <li><a href="./about.html">about</a></li>
             <li><a href="./contact.html">contact</a></li>
           </ul>
         </nav>
 
-        <nav id="mobile-nav" class="header__mobile-">
-          <div class="mobile-menu">
-            <div>
-              <span class="material-symbols-outlined"> menu </span>
-              <span class="material-symbols-outlined"> close </span>
-            </div>
+        <nav id="mobile-nav" class="header__mobile-nav">
+          <div class="mobile__menu-buttons">
+            <button class="material-symbols-outlined mobile__menu-icon">
+              menu
+            </button>
+            <button class="material-symbols-outlined mobile__menu-icon">
+              close
+            </button>
           </div>
 
-          <ul class="header__desktop-list">
+          <ul class="header__mobile-list">
             <li><a href="./index.html">Home</a></li>
             <li><a href="./collection.html">collection</a></li>
             <li><a href="./about.html">about</a></li>
@@ -81,7 +83,7 @@
           </div>
 
           <div class="hero__right">
-            <img src="" alt="furniture image" />
+            <img src="./image/furniture-1.jpg" alt="furniture image" />
             <div class="card">
               <div class="card__top">
                 <img

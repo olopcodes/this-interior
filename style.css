@@ -1,33 +1,159 @@
-/* 
- 
-
-*/
+/* general styles ==============================================*/
 
 :root {
   --heading-font: "Playfair Display SC", serif;
   --body-font: "Roboto Flex", sans-serif;
 
   --white: #fdfdfd;
-  --dark: #444;
+  --dark: #232323;
   --accent: rgb(247, 222, 81);
 
   --font-size: 16px;
 
   /* spacing based on 16px */
-  --space-xs: 0.25rem;
-  --space-sm: 0.5rem;
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
   --spacing-reg: 1rem;
   --spacing-med: 1.5rem;
   --spacing-lg: 2rem;
   --spacing-xl: 3rem;
   --spacing-xxl: 5rem;
 
-  --max-width: 80em;
+  --max-width: 90em;
   --sm-breakpoint: 31.25em;
   --med-breakpoint: 51em;
   --lg-breakpoint: 71em;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: var(--font-size);
+}
+
 html,
 body {
+  min-height: 100vh;
+}
+
+body {
+  background-color: var(--dark);
+  color: var(--white);
+  font-family: var(--body-font);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--heading-font);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  color: var(--white);
+}
+
+.container {
+  width: 94%;
+  padding: 0 var(--spacing-sm);
+  margin: 0 auto;
+  max-width: var(--max-width);
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.active-link {
+  color: var(--accent) !important;
+  border-bottom: 2px solid;
+  font-weight: 600;
+}
+
+/* header styles ==============================================*/
+.header .container {
+  padding-top: var(--spacing-reg);
+  padding-bottom: var(--spacing-reg);
+}
+
+.logo {
+  color: var(--white);
+  font-family: var(--heading-font);
+  border: 1px solid;
+  padding: var(--spacing-sm);
+}
+
+.logo:hover {
+  color: var(--white) !important;
+}
+
+.header__desktop-nav {
+  display: none;
+}
+
+.header__mobile-list {
+  display: none;
+}
+
+.header a {
+  color: var(--white);
+  padding-bottom: var(--spacing-sm);
+}
+
+.header a:hover {
+  color: var(--accent);
+}
+
+.mobile__menu-icon:nth-of-type(2) {
+  display: none;
+}
+
+@media screen and (min-width: 51em) {
+  .header__desktop-nav {
+    display: block;
+  }
+
+  .header__desktop-list {
+    display: flex;
+    gap: var(--spacing-reg);
+    text-transform: capitalize;
+  }
+
+  .header__mobile-nav {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 71em) {
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .header__desktop-list {
+    font-size: 1.25rem;
+    gap: var(--spacing-med);
+  }
 }
