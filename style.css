@@ -1,0 +1,33 @@
+/* 
+ 
+
+*/
+
+:root {
+  --heading-font: "Playfair Display SC", serif;
+  --body-font: "Roboto Flex", sans-serif;
+
+  --white: #fdfdfd;
+  --dark: #444;
+  --accent: rgb(247, 222, 81);
+
+  --font-size: 16px;
+
+  /* spacing based on 16px */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --spacing-reg: 1rem;
+  --spacing-med: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+  --spacing-xxl: 5rem;
+
+  --max-width: 80em;
+  --sm-breakpoint: 31.25em;
+  --med-breakpoint: 51em;
+  --lg-breakpoint: 71em;
+}
+
+html,
+body {
+}
