@@ -149,10 +149,80 @@ button {
   display: none;
 }
 
+.card {
+  position: absolute;
+  top: 70%;
+  left: 5%;
+
+  transform: translate(-50%, -50%);
+  padding: var(--spacing-reg);
+  width: 90%;
+  margin: 0 auto;
+  max-width: 25rem;
+  background-color: var(--dark);
+  transform: translateY(-2rem);
+}
+
+.card__top {
+  display: grid;
+  grid-template-columns: 3.5rem 1fr;
+  grid-auto-rows: 2rem;
+  grid-template-areas:
+    "img name"
+    "img job";
+  column-gap: var(--spacing-reg);
+}
+
+.card img {
+  border-radius: 50%;
+}
+
+.card-name {
+  grid-area: name;
+  font-size: 1rem;
+  align-self: center;
+  letter-spacing: 0.25px;
+}
+
+.card-job {
+  grid-area: job;
+  font-size: 0.85rem;
+}
+
+.card-heading {
+  font-size: 1.5rem;
+  line-height: 1.1;
+}
+
+.card__buttons {
+  display: flex;
+  margin: var(--spacing-med) auto 0;
+  width: 80%;
+  display: none;
+}
+
+.card__buttons a {
+  color: var(--accent);
+  font-size: 0.85rem;
+  text-transform: capitalize;
+  padding: var(--spacing-sm);
+  border: 1px solid;
+}
+
+.card__buttons a:hover {
+  background-color: var(--accent);
+  color: var(--dark);
+}
+
+.card__buttons a:nth-of-type(2) {
+  background-color: var(--accent);
+  color: var(--dark);
+}
+
 /* hero styles ==============================================*/
 
 .hero {
-  padding: var(--spacing-xl) 0;
+  padding: var(--spacing-xl) 0 10rem;
 }
 
 .hero__left {
@@ -169,6 +239,10 @@ button {
   margin-bottom: var(--spacing-med);
 }
 
+.hero__right {
+  position: relative;
+}
+
 .hero-img {
   height: 20rem;
 }
@@ -176,6 +250,12 @@ button {
 /* card  ================================= */
 
 @media screen and (min-width: 48em) {
+  .card {
+    padding: var(--spacing-lg);
+    left: 20%;
+    top: 80%;
+  }
+
   /* header */
   .header__desktop-nav {
     display: block;
@@ -206,6 +286,7 @@ button {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
   }
 
   .hero-img {
@@ -214,6 +295,10 @@ button {
 }
 
 @media screen and (min-width: 62em) {
+  .card {
+    left: 22%;
+  }
+
   .logo {
     font-size: 1.5rem;
   }
@@ -232,9 +317,16 @@ button {
     display: block;
     flex-basis: 36%;
     margin-bottom: 0;
+    text-align: left;
   }
 
   .hero__right {
     flex-basis: 55%;
+  }
+}
+
+@media screen and (min-width: 80em) {
+  .card {
+    left: 40%;
   }
 }
