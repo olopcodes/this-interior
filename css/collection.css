@@ -1,0 +1,20 @@
+section {
+  padding: var(--spacing-xl) 0;
+}
+
+.collection__left {
+}
+
+.collection__img-box h3 {
+  font-size: 1.25rem;
+  color: var(--accent);
+  margin-bottom: var(--spacing-sm);
+}
+
+.collection__img-box p {
+  font-size: 0.85rem;
+}
+
+.collection__img-box div {
+  padding: var(--spacing-med) var(--spacing-sm);
+}
