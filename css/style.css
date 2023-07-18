@@ -21,8 +21,8 @@
 
   --max-width: 90em;
   --sm-breakpoint: 31.25em;
-  --med-breakpoint: 51em;
-  --lg-breakpoint: 71em;
+  --med-breakpoint: 50em;
+  --lg-breakpoint: 70em;
 }
 
 * {

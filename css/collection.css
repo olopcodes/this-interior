@@ -2,7 +2,25 @@ section {
   padding: var(--spacing-xl) 0;
 }
 
-.collection__left {
+.collection-hero .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.collection-hero__left {
+  order: 2;
+
+  display: grid;
+  grid-template-rows: auto auto auto auto;
+  gap: var(--spacing-med);
+}
+
+.collection__img-box:first-of-type {
+}
+
+.collection__img-box:last-of-type {
 }
 
 .collection__img-box h3 {
@@ -17,4 +35,122 @@ section {
 
 .collection__img-box div {
   padding: var(--spacing-med) var(--spacing-sm);
+}
+
+.collection-review-1 {
+  grid-row: 2;
+}
+
+.collection-review-2 {
+}
+
+.collection-review {
+  padding: var(--spacing-med);
+  background-color: var(--white);
+  color: var(--dark);
+  font-size: 0.85rem;
+}
+
+.collection-name,
+.collection-title {
+  text-align: right;
+  font-style: italic;
+  /* color: var(); */
+}
+
+.collection-hero__right {
+  order: 1;
+  margin-bottom: var(--spacing-xxl);
+  width: 100%;
+}
+
+.collection-hero__right h1 {
+  line-height: 1.2;
+}
+
+.collection-hero__right p {
+  margin-bottom: var(--spacing-reg);
+  max-width: 30rem;
+}
+
+@media screen and (min-width: 31.25em) {
+  .collection-hero__left {
+    grid-template-columns: 47% 47%;
+    grid-template-rows: auto auto;
+    justify-content: space-between;
+  }
+
+  .collection__img-box {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 55% 41%;
+    justify-content: space-between;
+  }
+
+  .collection__img-box div {
+    order: 1;
+    display: grid;
+    align-content: center;
+  }
+
+  .collection__img-box-2 img {
+    order: 2;
+  }
+
+  .collection__img-box img {
+    height: 100%;
+  }
+
+  .collection-review-2 {
+    grid-row: 2;
+  }
+}
+
+@media screen and (min-width: 50em) {
+  .collection-hero__left {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+      "img-1 img-1 rev-1"
+      "rev-2 img-2 img-2";
+  }
+
+  .collection__img-box-1 {
+    grid-area: img-1;
+  }
+
+  .collection__img-box-2 {
+    grid-area: img-2;
+  }
+
+  .collection__img-box-2 img {
+    order: 1;
+  }
+
+  .collection-review-1 {
+    grid-area: rev-1;
+  }
+
+  .collection-review-2 {
+    grid-area: rev-2;
+  }
+}
+
+@media screen and (min-width: 70em) {
+  .collection-hero .container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .collection-hero__right {
+    flex-basis: 35%;
+  }
+
+  .collection-hero__left {
+    flex-basis: 63%;
+  }
+
+  .collection-review {
+    display: grid;
+    align-content: center;
+  }
 }
